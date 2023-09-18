@@ -30,7 +30,7 @@ TecnoDespegue es un lugar donde la tecnología y la innovación se encuentran pa
 
 ¡Únete a nuestra comunidad de entusiastas de la tecnología!
 
-- [Sitio web](https://www.tecnodespegue.com)
+- [Sitio web](https://tecnodespegue.com)
 - [Twitter](https://twitter.com/tecnodespegue)
 - [Facebook](https://www.facebook.com/tecnodespegue)
 - [Instagram](https://www.instagram.com/tecnodespegue)
