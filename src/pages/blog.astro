@@ -6,6 +6,8 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import Watsapp from "@components/watsapp.astro";
 
+
+
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
   return !data.draft && data.publishDate < new Date();
@@ -18,14 +20,14 @@ publishedBlogEntries.sort(function (a, b) {
 ---
 
 <Layout title="Blog">
-  <Container>
+  <Container> 
     <Sectionhead>
       <Fragment slot="title">Cursos y Tutoriales</Fragment>
       <Fragment slot="desc">
         "Desbloquea Tu Potencial: Explora Nuestros Cursos y Tutoriales de Éxito".
       </Fragment>
     </Sectionhead>
-    <main class="mt-16">
+    <main class="mt-16 ">
       <ul class="grid gap-16 max-w-4xl mx-auto">
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
@@ -43,7 +45,7 @@ publishedBlogEntries.sort(function (a, b) {
                     position="center"
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md"
+                    class="w-full rounded-md image-zoom"
                   />
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
@@ -76,3 +78,15 @@ publishedBlogEntries.sort(function (a, b) {
   </Container>
 <Watsapp />
 </Layout>
+
+<style>
+.image-zoom {
+  transition: transform 0.3s ease; /* Transición suave de 0.3 segundos */
+}
+
+/* Efecto de zoom al pasar el mouse */
+.image-zoom:hover {
+  transform: scale(1.1); /* Escala la imagen al 110% al pasar el mouse */
+  
+}
+</style>
