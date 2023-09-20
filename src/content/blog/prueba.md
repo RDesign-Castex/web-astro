@@ -11,4 +11,3 @@ category: "Cursos"
 author: "René Kuhm"
 tags: ["Aprendizaje", "Computación"]
 ---
-##  hola como estas
